@@ -42,8 +42,8 @@ class FractalImageGenerator : Controller() {
         } else {
             // unstable coordinates are lighter based on stability
             val blue = (stability + 0.17).coerceIn(0.0..1.0)
-            val green = blue / 1.3
-            val red = green / 1.3
+            val green = blue / 1.15
+            val red = green / 1.15
             image.pixelWriter.setColor(x, y, Color(red, green, blue, 1.0))
         }
     }
